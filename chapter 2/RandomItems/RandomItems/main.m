@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LDMItem.h"
+#import "LDMContainer.h"
 
 int main(int argc, const char * argv[])
 {
@@ -24,6 +25,10 @@ int main(int argc, const char * argv[])
             NSLog(@"%@", item);
         }
         items = nil;
+        
+        
+        LDMContainer *container = [LDMContainer createContainer];
+        NSLog(@"%@", container);
     }
     return 0;
 }

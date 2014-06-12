@@ -11,6 +11,7 @@
 		A09E7C001949129B0039E1A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E7BFF1949129B0039E1A1 /* main.m */; };
 		A09E7C041949129B0039E1A1 /* RandomItems.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A09E7C031949129B0039E1A1 /* RandomItems.1 */; };
 		A09E7C0C1949159D0039E1A1 /* LDMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E7C0B1949159D0039E1A1 /* LDMItem.m */; };
+		A09E7C0F194954970039E1A1 /* LDMContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E7C0E194954970039E1A1 /* LDMContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		A09E7C031949129B0039E1A1 /* RandomItems.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomItems.1; sourceTree = "<group>"; };
 		A09E7C0A1949159D0039E1A1 /* LDMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDMItem.h; sourceTree = "<group>"; };
 		A09E7C0B1949159D0039E1A1 /* LDMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDMItem.m; sourceTree = "<group>"; };
+		A09E7C0D194954970039E1A1 /* LDMContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDMContainer.h; sourceTree = "<group>"; };
+		A09E7C0E194954970039E1A1 /* LDMContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDMContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				A09E7C0B1949159D0039E1A1 /* LDMItem.m */,
 				A09E7C031949129B0039E1A1 /* RandomItems.1 */,
 				A09E7C011949129B0039E1A1 /* Supporting Files */,
+				A09E7C0D194954970039E1A1 /* LDMContainer.h */,
+				A09E7C0E194954970039E1A1 /* LDMContainer.m */,
 			);
 			path = RandomItems;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			files = (
 				A09E7C0C1949159D0039E1A1 /* LDMItem.m in Sources */,
 				A09E7C001949129B0039E1A1 /* main.m in Sources */,
+				A09E7C0F194954970039E1A1 /* LDMContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
