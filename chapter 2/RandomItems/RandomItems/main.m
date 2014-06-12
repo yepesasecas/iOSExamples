@@ -20,8 +20,8 @@ int main(int argc, const char * argv[])
             [items addObject:item];
         }
         
-        for (LDMItem *item in items ){
-            NSLog(@"%@", item);
+        for (int i = 0; i<=11; i++) {
+            NSLog(@"%@", [items objectAtIndex:i]);
         }
         items = nil;
     }
