@@ -22,13 +22,23 @@
                   valueInDollars:(int) value
                     serialNumber:(NSString *) number;
 
+-(instancetype) initWithItemName:(NSString *)name
+                    serialNumber:(NSString *)number;
+
 -(instancetype) initWithItemName:(NSString *) name;
 
 -(void) setItemName: (NSString *)str;
+
 -(NSString *) itemName;
+
 -(void) setSerialNumber: (NSString *) str;
+
+
 -(NSString *) serialNumber;
+
 -(void) setValueInDollars: (int) value;
+
 -(int)  valueInDollars;
+
 -(NSDate *) dateCreated;
 @end

@@ -14,10 +14,6 @@
 // INITIALIZERS
 //----------------------------------------------------------
 
--(instancetype)init{
-    return [self initWithItemName:@"item"];
-}
-
 -(instancetype)initWithItemName:(NSString *)name
                  valueInDollars:(int)value
                    serialNumber:(NSString *)number{
@@ -31,10 +27,21 @@
     return self;
 }
 
+-(instancetype)init{
+    return [self initWithItemName:@"item"];
+}
+
 -(instancetype)initWithItemName:(NSString *)name{
     return [self initWithItemName:name
                    valueInDollars:0
                      serialNumber:@""];
+}
+
+-(instancetype)initWithItemName:(NSString *)name
+                   serialNumber:(NSString *)number{
+    return [self initWithItemName:name
+                   valueInDollars:50
+                     serialNumber:number];
 }
 //----------------------------------------------------------
 // CLASS METHODS
@@ -59,7 +66,6 @@
                                    '0' + arc4random() % 10];
     
     LDMItem *item = [[self alloc]initWithItemName:randomName
-                                   valueInDollars:randomValue
                                      serialNumber:randomSerialNumber];
     return item;
 }
