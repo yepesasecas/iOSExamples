@@ -42,5 +42,17 @@
         
     }
     [path stroke];
+    
+    
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(currentContext);
+//------Los elementos que agregue aqui, apareceran con sombra
+        CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+        UIImage *logo = [UIImage imageNamed:@"logo"];
+        CGRect logoBounds = CGRectMake(50, 100, bounds.size.width - 100, bounds.size.height - 200);
+        [logo drawInRect:logoBounds];
+    CGContextRestoreGState(currentContext);
+
+    
 }
 @end
