@@ -42,17 +42,34 @@
         
     }
     [path stroke];
-    
-    
+    [self drawShadows:bounds];
+    [self drawGradient];
+}
+-(void)drawShadows:(CGRect)bounds{
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     CGContextSaveGState(currentContext);
-//------Los elementos que agregue aqui, apareceran con sombra
-        CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
-        UIImage *logo = [UIImage imageNamed:@"logo"];
-        CGRect logoBounds = CGRectMake(50, 100, bounds.size.width - 100, bounds.size.height - 200);
-        [logo drawInRect:logoBounds];
+    //------Los elementos que agregue aqui, apareceran con sombra
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+    UIImage *logo = [UIImage imageNamed:@"logo"];
+    CGRect logoBounds = CGRectMake(50, 100, bounds.size.width - 100, bounds.size.height - 200);
+    [logo drawInRect:logoBounds];
     CGContextRestoreGState(currentContext);
-
+}
+-(void)drawGradient{
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(currentContext);
+    CGFloat locations[2]  = {0.0, 1.0};
+    CGFloat components[8] = {1.0, 0.0, 0.0, 1.0,
+                             1.0, 1.0, 0.0, 1.0};
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient     = CGGradientCreateWithColorComponents(colorspace, components, locations, 2);
+    CGPoint startPoint = CGPointMake(40, 40);
+    CGPoint endPoint   = CGPointMake(100, 100);
+    CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, 0);
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorspace);
+    
+    CGContextRestoreGState(currentContext);
     
 }
 @end
